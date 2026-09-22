@@ -2,7 +2,7 @@ import streamlit as st
 
 # Configuração da página
 st.set_page_config(
-    page_title="Calculadora de Custos de Inventário", 
+    page_title="Calculadora de Custos de Inventário | Planejamento Sucessório", 
     page_icon="⚖️", 
     layout="centered"
 )
@@ -79,9 +79,10 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- CABEÇALHO ---
+# --- CABEÇALHO COM NOVOS TEXTOS OTIMIZADOS ---
 st.title("⚖️ Estimativa de Custos de Inventário")
-st.write("Simule com precisão os custos com impostos (ITCMD), taxas de cartório e honorários advocatícios para a sua gestão patrimonial.")
+st.markdown("### **Planejamento Sucessório & Gestão Patrimonial**")
+st.write("Obtenha uma **estimativa aproximada** dos investimentos necessários para regularização patrimonial, incluindo imposto ITCMD, taxas de cartório e honorários advocatícios.")
 
 # --- SEÇÃO 1: PATRIMÔNIO ---
 st.subheader("PATRIMÔNIO")
@@ -159,7 +160,7 @@ v_total = v_itcmd + v_honorarios + v_cartorio
 st.markdown("<br>", unsafe_allow_html=True)
 if st.button("CALCULAR ESTIMATIVA", type="primary", use_container_width=True):
     st.divider()
-    st.subheader("📊 Resumo Executivo dos Custos")
+    st.subheader("📊 Resumo Executivo da Estimativa")
     
     if v_previdencia > 0 or v_seguro > 0:
         st.success(f"✅ **Eficiência Fiscal:** R$ {(v_previdencia + v_seguro):,.2f} alocados em Previdência/Seguro não entram no inventário e estão isentos de ITCMD.")
@@ -177,9 +178,11 @@ if st.button("CALCULAR ESTIMATIVA", type="primary", use_container_width=True):
 
     st.divider()
     st.subheader("📲 Fale com um Especialista")
-    st.write("Agende uma consulta para realizar o planejamento sucessório com máxima economia fiscal.")
+    st.write("Agende uma consulta para estruturar o seu planejamento sucessório com máxima economia fiscal.")
     
-    link_whatsapp = "https://wa.me/5500000000000"  # Substitua pelo seu número com DDD
+    # Link direto para o seu WhatsApp (19 99817-1093) com mensagem personalizada
+    link_whatsapp = "https://wa.me/5519998171093?text=Ol%C3%A1!%20Fiz%20a%20simula%C3%A7%C3%A3o%20na%20calculadora%20de%20invent%C3%A1rio%20e%20gostaria%20de%20analisar%20meu%20caso."
+    
     st.markdown(f'''
         <a href="{link_whatsapp}" target="_blank" style="text-decoration:none;">
             <button style="
